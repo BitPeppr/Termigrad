@@ -1,3 +1,4 @@
+import os
 import shutil
 import sys
 import time
@@ -37,6 +38,8 @@ LEAVE = b"\x1b[?25h\x1b[?1049l"
 TTY = sys.stdout.isatty()
 out = sys.stdout.buffer
 FRAME_INTERVAL = 1.0 / 30
+
+COLOUR = TTY and not os.environ.get("NO_COLOR")
 
 
 # Setup -------------------------------------------------------------------
@@ -89,7 +92,7 @@ try:
             u += dU * lap_u - reaction + F * (1 - u)
             v += dV * lap_v + reaction - (F + k) * v
 
-        frame = render(v)
+        frame = render(v, colour=COLOUR)
         out.write(FRAME + frame if TTY else frame)
         out.flush()
 
