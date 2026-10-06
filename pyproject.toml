@@ -1,0 +1,62 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "gs-dr"
+version = "0.1.0"
+description = "Gray-Scott reaction-diffusion simulation rendered as truecolour ASCII in your terminal."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "GPL-3.0-or-later" }
+authors = [{ name = "Martin Chen" }]
+keywords = [
+    "gray-scott",
+    "reaction-diffusion",
+    "ascii",
+    "terminal",
+    "animation",
+    "simulation",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Multimedia :: Graphics",
+    "Topic :: Scientific/Engineering :: Visualization",
+    "Topic :: Terminals",
+]
+dependencies = ["numpy>=1.22"]
+
+[project.optional-dependencies]
+dev = [
+    "build>=1.0",
+    "twine>=4.0",
+    "pytest>=7.0",
+    "ruff>=0.4",
+]
+
+[project.urls]
+Homepage = "https://github.com/mart-in-chen/gs-dr"
+Source = "https://github.com/mart-in-chen/gs-dr"
+Issues = "https://github.com/mart-in-chen/gs-dr/issues"
+
+[project.scripts]
+gs-dr = "gs_dr.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/gs_dr"]
+
+[tool.hatch.build.targets.sdist]
+include = ["src/", "tests/", "README.md", "LICENSE", "pyproject.toml"]
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
