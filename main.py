@@ -11,6 +11,21 @@ from render import render
 dim = shutil.get_terminal_size()
 shape = (dim.lines, dim.columns)
 
+# Choose one preset
+
+# Spots / mitosis
+# F, k, dU, dV = 0.0367, 0.0649, 0.160, 0.080
+
+# Coral / branching
+# F, k, dU, dV = 0.0545, 0.0620, 0.160, 0.080
+
+# Worms / moving structures
+# F, k, dU, dV = 0.0300, 0.0620, 0.160, 0.080
+
+# Stripes
+F, k, dU, dV = 0.0220, 0.0510, 0.160, 0.080
+
+# Moon cake
 # F, k, dU, dV = 0.0400, 0.0600, 0.160, 0.080
 
 sims_per_frame = 16
