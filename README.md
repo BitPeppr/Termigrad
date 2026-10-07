@@ -1,12 +1,12 @@
-# gs-dr
+# termigrad
 
 A terminal-based ascii visualiser for the Gray Scott Reaction-Diffusion model.
 
 ## Installation
 
 ```bash
-pip install gs-dr
-gs-dr -h
+pip install termigrad
+termigrad -h
 ```
 
 ## Features

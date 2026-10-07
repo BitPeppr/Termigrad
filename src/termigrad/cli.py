@@ -6,7 +6,7 @@ import time
 
 import numpy as np
 
-from gs_dr.render import render
+from termigrad.render import render
 
 # Presets ------------------------------------------------------------------
 
@@ -88,7 +88,7 @@ class Field:
 
 def _build_parser():
     parser = argparse.ArgumentParser(
-        prog="gs-dr",
+        prog="termigrad",
         description="Run a Gray-Scott reaction-diffusion simulation in your terminal.",
     )
 
@@ -143,7 +143,7 @@ def main(argv=None):
 
     if shape[0] < MIN_LINES or shape[1] < MIN_COLUMNS:
         sys.stderr.write(
-            f"gs-dr: terminal is {shape[1]}x{shape[0]}, "
+            f"termigrad: terminal is {shape[1]}x{shape[0]}, "
             f"need at least {MIN_COLUMNS}x{MIN_LINES}. Try resizing.\n"
         )
         return 1
