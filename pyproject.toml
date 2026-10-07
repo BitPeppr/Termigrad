@@ -43,9 +43,9 @@ dev = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/BitPeppr/GSD"
-Source = "https://github.com/BitPeppr/GSD"
-Issues = "https://github.com/BitPeppr/GSD/issues"
+Homepage = "https://github.com/BitPeppr/Termigrad"
+Source = "https://github.com/BitPeppr/Termigrad"
+Issues = "https://github.com/BitPeppr/Termigrad/issues"
 
 [project.scripts]
 termigrad = "termigrad.cli:main"
