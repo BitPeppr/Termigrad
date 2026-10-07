@@ -6,6 +6,7 @@ import time
 
 import numpy as np
 
+from termigrad import __version__
 from termigrad.render import render
 
 # Presets ------------------------------------------------------------------
@@ -123,6 +124,12 @@ def _build_parser():
         "--no-colour",
         action="store_true",
         help="render in plain ASCII, without 24-bit colour",
+    )
+    parser.add_argument(
+        "--version",
+        action="version",
+        version=f"%(prog)s {__version__}",
+        help="show the version and exit",
     )
 
     return parser

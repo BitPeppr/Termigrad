@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "termigrad"
-version = "0.1.0"
+dynamic = ["version"]
 description = "Gray-Scott reaction-diffusion simulation rendered as truecolour ASCII in your terminal."
 readme = "README.md"
 requires-python = ">=3.9"
@@ -50,6 +50,9 @@ Issues = "https://github.com/BitPeppr/GSD/issues"
 
 [project.scripts]
 termigrad = "termigrad.cli:main"
+
+[tool.hatch.version]
+path = "src/termigrad/__init__.py"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/termigrad"]
