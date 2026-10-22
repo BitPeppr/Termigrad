@@ -1,6 +1,8 @@
-# termigrad
+# Termigrad
 
 A terminal-based ascii visualiser for the Gray Scott Reaction-Diffusion model.
+
+![Screenshot](./Screenshot.png)
 
 ## Installation
 
